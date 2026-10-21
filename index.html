@@ -16,6 +16,8 @@
   .start { margin: 2.2em 0; }
   .start a { font-weight: bold; }
   .small { color: #777; font-size: .85em; margin-top: 3em; }
+  .copy { font: inherit; font-size: .8em; color: #777; background: none; border: 0; padding: 0; margin-left: .3em; text-decoration: underline; cursor: pointer; }
+  .copy:hover { color: #111; }
 </style>
 </head>
 <body>
@@ -92,12 +94,29 @@
 
 <p><b>Resources and skills.</b> Ask your agent to read these sites and skills to get these powers and thinking.</p>
 
-<ul>
-  <li><a href="https://impeccable.style/">Impeccable</a>: a design skill for great product design and management.</li>
-  <li><a href="https://startupkit.com/">StartupKit</a>: GTM integrations to drive your growth.</li>
-  <li><a href="https://getlev.co/">Lev</a>: brainstorm new ideas, and have your Grok Bot manage Lev for you.</li>
+<ul class="res">
+  <li><a href="https://impeccable.style/">Impeccable</a>: a design skill for great product design and management. <button class="copy" data-url="https://impeccable.style/">Copy link</button></li>
+  <li><a href="https://startupkit.com/">StartupKit</a>: GTM integrations to drive your growth. <button class="copy" data-url="https://startupkit.com/">Copy link</button></li>
+  <li><a href="https://getlev.co/">Lev</a>: brainstorm new ideas, and have your Grok Bot manage Lev for you. <button class="copy" data-url="https://getlev.co/">Copy link</button></li>
+  <li><a href="https://www.momtestbook.com/">The Mom Test</a>: Rob Fitzpatrick's guide to talking with customers so they can't just be nice to you. <button class="copy" data-url="https://www.momtestbook.com/">Copy link</button></li>
+  <li><a href="https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/">Superhuman's product-market fit engine</a>: Rahul Vohra's "how disappointed would you be without it?" survey and its 40% bar, a real way to measure the magic spark. <button class="copy" data-url="https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/">Copy link</button></li>
+  <li><a href="https://github.com/obra/superpowers">Superpowers</a>: Jesse Vincent's skill pack that makes coding agents work like senior engineers: plan small, test, ship. <button class="copy" data-url="https://github.com/obra/superpowers">Copy link</button></li>
+  <li><a href="https://github.com/anthropics/skills">Anthropic's skills library</a>: the official set of agent skills, including the frontend design skill. <button class="copy" data-url="https://github.com/anthropics/skills">Copy link</button></li>
+  <li><a href="https://posthog.com/">PostHog</a>: product analytics, session replays, and surveys in one place, so your agent can see how people actually use the product. <button class="copy" data-url="https://posthog.com/">Copy link</button></li>
+  <li><a href="https://www.ycombinator.com/library">YC Library</a>: Y Combinator's advice for founders, in one place. <button class="copy" data-url="https://www.ycombinator.com/library">Copy link</button></li>
+  <li><a href="https://www.paulgraham.com/articles.html">Paul Graham's essays</a>: the source material behind most of Goose's soul. <button class="copy" data-url="https://www.paulgraham.com/articles.html">Copy link</button></li>
+  <li><a href="https://linear.app/method">The Linear Method</a>: a short guide to building with momentum and taste. <button class="copy" data-url="https://linear.app/method">Copy link</button></li>
 </ul>
 
 <p class="small">Made by <a href="https://shanemac.com">Shane Mac</a>. With debts to Paul Graham and Y Combinator: make something people want, do things that don't scale, talk to your users.</p>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    navigator.clipboard.writeText(b.dataset.url).then(function(){
+      b.textContent='Copied'; setTimeout(function(){ b.textContent='Copy link'; },1500);
+    });
+  });
+});
+</script>
 </body>
 </html>
