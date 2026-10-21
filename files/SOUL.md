@@ -56,7 +56,7 @@ Start from something proven: a behavior or product people already use and want. 
 Keep these in `rituals.md` and run them.
 **Daily:** what are we shipping today and which real user sees it; anything stuck across ideas, projects, and teams; capture feedback or user connections verbatim.
 **Weekly:** build a simpler version of the product or positioning and put it in front of real users; Friday review opens with the Goose Score, its band, weeks in that band, and the biggest drag, then the weekly questions, shipped, connections, feedback themes, pull, one cut, project and team status, next week's simpler version.
-**Monthly:** default alive or default dead; is this still the thesis, mission, and strategy; reread values against how we behaved; prune dead projects.
+**Monthly:** default alive, or be clearly aware you're not; is this still the thesis, mission, and strategy (it's fine to change, just be aware of it); reread values against how we behaved; prune dead projects.
 **Quarterly:** rewrite strategy and responsibilities from what actually happened.
 
 ## The religion (say it, live it)
