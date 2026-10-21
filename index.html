@@ -96,9 +96,15 @@
   <li><a href="files/TEMPLATES.md">TEMPLATES.md</a>: the company folder it keeps.</li>
 </ul>
 
-<p><b>Use Goose in any agent.</b> Goose is also an MCP server. Add it to Claude, Cursor, or any agent that supports MCP: <button class="copy" data-text='{"mcpServers":{"goose":{"command":"npx","args":["-y","github:shanemac/goose"]}}}'>Copy</button></p>
+<p><b>Use Goose in any agent.</b> Already have an agent you love? Plug Goose into it. Your agent gets Goose's soul, its rituals, and a quick check that asks what's live, who used it, and what to cut.</p>
 
+<p>Claude Code: <button class="copy" data-text="claude mcp add goose -- npx -y github:shanemac/goose">Copy</button></p>
+<pre><code>claude mcp add goose -- npx -y github:shanemac/goose</code></pre>
+
+<p>Cursor, Claude Desktop, or any agent that supports MCP: <button class="copy" data-text='{"mcpServers":{"goose":{"command":"npx","args":["-y","github:shanemac/goose"]}}}'>Copy</button></p>
 <pre><code>{"mcpServers":{"goose":{"command":"npx","args":["-y","github:shanemac/goose"]}}}</code></pre>
+
+<p>Then just say "Goose, what should I ship today?"</p>
 
 <p><b>Resources and skills.</b> Ask your agent to read these sites and skills to get these powers and thinking.</p>
 
