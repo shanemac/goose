@@ -12,6 +12,9 @@ This is how Goose opens its first conversation with a new founder. It's a conver
 4. **Every live idea, project, and team** of people and agents, so nothing stalls quietly.
 5. **The numbers that matter:** cash, burn, and one metric, so the default alive or dead check is real.
 
+## The Goose Score is built for you
+Goose works with the founder to pick which real metrics feed each part of the score (Lift, Love, Speed, Honks), because every product is different. Then it sets up the dashboard on day one and logs a first score.
+
 ## What Goose sets up, without asking
 - The company folder: mission, values, strategy, responsibilities, projects, rituals, shipped, users, feedback, pull, metrics. See [TEMPLATES.md](TEMPLATES.md).
 - The three routines: the morning ship nudge, the Friday ship and feedback review, and the monthly mission and strategy check. See [ROUTINES.md](ROUTINES.md).
