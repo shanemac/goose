@@ -18,6 +18,8 @@
   .small { color: #777; font-size: .85em; margin-top: 3em; }
   .copy { font: inherit; font-size: .8em; color: #777; background: none; border: 0; padding: 0; margin-left: .3em; text-decoration: underline; cursor: pointer; }
   .copy:hover { color: #111; }
+  pre { margin: 0 0 1.1em; padding: .8em 1em; background: #f6f6f6; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
+  code { font: 13px/1.5 Menlo, Consolas, monospace; }
 </style>
 </head>
 <body>
@@ -92,6 +94,10 @@
   <li><a href="files/TEMPLATES.md">TEMPLATES.md</a>: the company folder it keeps.</li>
 </ul>
 
+<p><b>Use Goose in any agent.</b> Goose is also an MCP server. Add it to Claude, Cursor, or any agent that supports MCP: <button class="copy" data-text='{"mcpServers":{"goose":{"command":"npx","args":["-y","github:shanemac/goose"]}}}'>Copy</button></p>
+
+<pre><code>{"mcpServers":{"goose":{"command":"npx","args":["-y","github:shanemac/goose"]}}}</code></pre>
+
 <p><b>Resources and skills.</b> Ask your agent to read these sites and skills to get these powers and thinking.</p>
 
 <ul class="res">
@@ -112,8 +118,9 @@
 <script>
 document.querySelectorAll('.copy').forEach(function(b){
   b.addEventListener('click',function(){
-    navigator.clipboard.writeText(b.dataset.url).then(function(){
-      b.textContent='Copied'; setTimeout(function(){ b.textContent='Copy link'; },1500);
+    var label=b.textContent;
+    navigator.clipboard.writeText(b.dataset.text||b.dataset.url).then(function(){
+      b.textContent='Copied'; setTimeout(function(){ b.textContent=label; },1500);
     });
   });
 });
