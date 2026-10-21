@@ -30,6 +30,20 @@
   .part .v { font-size: 1.35em; line-height: 1.3; }
   .part .s { font-size: .74em; color: #555; line-height: 1.35; }
   .gs-burn { font-size: .78em; color: #777; margin-top: .8em; }
+  .scale { margin: 0 0 1.4em; }
+  .bar { position: relative; display: flex; height: 6px; margin: 1.4em 0 .35em; }
+  .bar span { display: block; height: 100%; }
+  .bar span + span { margin-left: 2px; }
+  .mark { position: absolute; top: -1.25em; transform: translateX(-50%); font-size: .7em; color: #111; }
+  .mark:after { content: ""; display: block; width: 2px; height: 12px; background: #111; margin: .15em auto 0; }
+  .ticks { position: relative; height: 1.2em; font-size: .7em; color: #999; margin-bottom: .9em; }
+  .ticks span { position: absolute; transform: translateX(-50%); }
+  .ticks span:first-child { transform: none; }
+  .ticks span:last-child { transform: translateX(-100%); }
+  .bands { list-style: none; padding: 0; margin: 0 0 .8em; font-size: .88em; }
+  .bands li { display: flex; gap: .8em; margin-bottom: .45em; }
+  .bands b { flex: 0 0 2.6em; font-weight: normal; color: #777; }
+  .rule { font-size: .88em; color: #555; }
   @media (max-width: 30em) { .parts { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
@@ -77,7 +91,7 @@
   <li>It owns your mission, values, and strategy, so you never have to sit down and write them.</li>
 </ul>
 
-<p>Geese fly in a V: each bird rides the lift of the one ahead, they honk to keep each other going, and they take turns at the front, so the flock flies farther than any one bird could.</p>
+<p>Goose is named for geese flying in a V: each bird rides the lift of the one ahead, they honk to keep each other going, and they take turns at the front, so the flock flies farther than any one bird could.</p>
 
 <p>Goose turns that into one number, the Goose Score: a 1 to 10 grade for your startup, built from how fast you're growing, whether people come back, how often you ship, and how many real people you heard from this week.</p>
 
@@ -93,6 +107,24 @@
   <div class="gs-burn">$18k a month burn · 14 months runway · default alive</div>
 </div>
 
+<p>The score tells you what to do next. A low score means change something big, and a high score means keep pushing, so you don't spend months iterating on something that isn't working.</p>
+
+<div class="scale" aria-label="What the Goose Score means">
+  <div class="bar">
+    <span style="width:33.3%;background:#e4e4e1"></span><span style="width:22.2%;background:#cfcfcb"></span><span style="width:22.2%;background:#a9a9a4"></span><span style="width:11.1%;background:#6f6f6a"></span><span style="width:11.1%;background:#111"></span>
+    <div class="mark" style="left:73.3%">7.6</div>
+  </div>
+  <div class="ticks"><span style="left:0">1</span><span style="left:33.3%">4</span><span style="left:55.5%">6</span><span style="left:77.7%">8</span><span style="left:88.8%">9</span><span style="left:100%">10</span></div>
+  <ul class="bands">
+    <li><b>1–3</b><span><i>Not working.</i> Throw it out and try something radically different: a new customer, a new problem, or a new product.</span></li>
+    <li><b>4–5</b><span><i>Flat.</i> This is where people get stuck making small fixes. Make one big change to who it's for, the core loop, or how you describe it.</span></li>
+    <li><b>6–7</b><span><i>Something's there.</i> Find out what the people who love it love. Cut everything else and make that part sharper.</span></li>
+    <li><b>8–9</b><span><i>Working.</i> Keep shipping fast and improving it, and push on growth.</span></li>
+    <li><b>9+</b><span><i>Great.</i> This is the magic spark. Pour fuel on it.</span></li>
+  </ul>
+  <p class="rule">If you're in the same band three weeks in a row, make a bigger change.</p>
+</div>
+
 <p>Under all of it is one habit: <b>build a simpler version and get feedback.</b> On the product and on how you describe it. Prototypes, not plans. Some progress every week.</p>
 
 <ul>
@@ -100,8 +132,6 @@
   <li>Weekly: put a simpler version in front of real users.</li>
   <li>Monthly: check you're default alive, and that this is still the mission.</li>
 </ul>
-
-<p>It's named for the geese that fly in a V. They take turns at the front, and the ones behind honk to keep the leader going.</p>
 
 <p>Goose is an agent too, so it's built to never become your substitute for real people. It can reach users, gather feedback, and sort it for you, but every conversation with it ends pointed at a human relationship.</p>
 
