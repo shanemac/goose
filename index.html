@@ -20,18 +20,17 @@
   .copy:hover { color: #111; }
   pre { margin: 0 0 1.1em; padding: .8em 1em; background: #f6f6f6; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
   code { font: 13px/1.5 Menlo, Consolas, monospace; }
-  .pulse { border: 1px solid #e5e5e5; padding: 1em 1.1em .9em; margin: 0 0 1.4em; }
-  .pulse-head { display: flex; justify-content: space-between; font-size: .78em; color: #777; margin-bottom: .7em; }
-  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6em; }
-  .tile { background: #f7f7f5; padding: .7em .8em; }
-  .tile .k { font-size: .72em; color: #777; text-transform: uppercase; letter-spacing: .04em; }
-  .tile .v { font-size: 1.5em; line-height: 1.25; margin: .1em 0; }
-  .tile .s { font-size: .74em; color: #555; line-height: 1.35; }
-  .tile svg { display: block; width: 100%; height: 18px; margin-top: .3em; }
-  .tiles.small { margin-top: .6em; }
-  .tiles.small .tile { background: #fff; border: 1px solid #eee; padding: .5em .8em; }
-  .tiles.small .v { font-size: 1.15em; }
-  @media (max-width: 30em) { .tiles { grid-template-columns: 1fr; } }
+  .gs { border: 1px solid #e5e5e5; padding: 1.1em 1.2em 1em; margin: 0 0 1.4em; }
+  .gs-head { display: flex; justify-content: space-between; align-items: baseline; font-size: .78em; color: #777; }
+  .gs-score { font-size: 3em; line-height: 1.1; margin: .15em 0 .5em; }
+  .gs-score small { font-size: .3em; color: #777; margin-left: .3em; }
+  .parts { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5em; }
+  .part { background: #f7f7f5; padding: .6em .7em; }
+  .part .k { font-size: .72em; color: #777; text-transform: uppercase; letter-spacing: .04em; }
+  .part .v { font-size: 1.35em; line-height: 1.3; }
+  .part .s { font-size: .74em; color: #555; line-height: 1.35; }
+  .gs-burn { font-size: .78em; color: #777; margin-top: .8em; }
+  @media (max-width: 30em) { .parts { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
 <body>
@@ -78,21 +77,20 @@
   <li>It owns your mission, values, and strategy, so you never have to sit down and write them.</li>
 </ul>
 
-<p>On day one, Goose sets up one small dashboard with the only three numbers that matter: are you growing, do people love it, and how long can you keep going. Underneath, it counts the real people who gave you honest feedback on the product, because that's what moves the other three.</p>
+<p>Geese fly in a V: each bird rides the lift of the one ahead, they honk to keep each other going, and they take turns at the front, so the flock flies farther than any one bird could.</p>
 
-<div class="pulse" aria-label="Example Goose dashboard">
-  <div class="pulse-head"><span>Pulse</span><span>Example</span></div>
-  <div class="tiles">
-    <div class="tile"><div class="k">Growth rate</div><div class="v">6.2%</div><div class="s">per week · YC bar 5–7%</div>
-      <svg viewBox="0 0 100 18" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="#111" stroke-width="1.4" vector-effect="non-scaling-stroke" points="0,16 14,14.5 28,15 42,12 57,10.5 71,8 85,6 100,3"/></svg></div>
-    <div class="tile"><div class="k">Users who love it</div><div class="v">38%</div><div class="s">of last week's active users came back · 23 people</div></div>
-    <div class="tile"><div class="k">Burn</div><div class="v">$18k/mo</div><div class="s">14 months runway · default alive</div></div>
+<p>Goose turns that into one number, the Goose Score: a 1 to 10 grade for your startup, built from how fast you're growing, whether people come back, how often you ship, and how many real people you heard from this week.</p>
+
+<div class="gs" aria-label="Example Goose Score">
+  <div class="gs-head"><span>Goose Score</span><span>Example</span></div>
+  <div class="gs-score">7.6<small>of 10</small></div>
+  <div class="parts">
+    <div class="part"><div class="k">Lift</div><div class="v">8.4</div><div class="s">5.9% weekly growth</div></div>
+    <div class="part"><div class="k">Love</div><div class="v">8.0</div><div class="s">32% came back this week</div></div>
+    <div class="part"><div class="k">Speed</div><div class="v">6.0</div><div class="s">3 ship days</div></div>
+    <div class="part"><div class="k">Honks</div><div class="v">8.0</div><div class="s">6 real people, +25%</div></div>
   </div>
-  <div class="tiles small">
-    <div class="tile"><div class="k">Feedback this week</div><div class="v">7</div><div class="s">real people</div></div>
-    <div class="tile"><div class="k">Feedback overall</div><div class="v">63</div><div class="s">real people</div></div>
-    <div class="tile"><div class="k">Feedback growth</div><div class="v">▲ 40%</div><div class="s">vs last week</div></div>
-  </div>
+  <div class="gs-burn">$18k a month burn · 14 months runway · default alive</div>
 </div>
 
 <p>Under all of it is one habit: <b>build a simpler version and get feedback.</b> On the product and on how you describe it. Prototypes, not plans. Some progress every week.</p>
