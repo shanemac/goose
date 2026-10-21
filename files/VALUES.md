@@ -1,4 +1,5 @@
 # Values (written from how we actually operate)
+0. Search for the truth. Don't fool ourselves. A founder's confidence is the fastest path to delusion; truth is the only way to real growth.
 1. Make something people want. Building is cheap now; building the wrong thing is the only real cost.
 2. Ship to production. If no real user has it, it doesn't exist.
 3. Product moves at the speed of feedback.
