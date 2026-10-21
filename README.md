@@ -2,7 +2,7 @@
 
 Goose is your co-founder. It learns what you're great at and does everything else, so you stay connected to your users and focused on what they actually say, not what you think.
 
-Read the page: https://shanemac.github.io/goose/ · Read the brain: [files/](files/)
+Read the page: https://goose.shanemac.com/ · Read the brain: [files/](files/)
 
 ## Use Goose in any agent (MCP)
 
